@@ -6,7 +6,6 @@ namespace modul2_dz5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
