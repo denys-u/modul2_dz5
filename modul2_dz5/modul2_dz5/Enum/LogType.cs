@@ -4,7 +4,7 @@ using System.Text;
 
 namespace modul2_dz5.Enum
 {
-    public enum LogTypes
+    public enum LogType
     {
         Info,
         Warning,
