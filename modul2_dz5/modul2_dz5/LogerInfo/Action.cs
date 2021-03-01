@@ -16,6 +16,7 @@ namespace modul2_dz5.LogerInfo
 
         }
         public Result ThirdMethod()
+
         {
 
         }
