@@ -1,26 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace modul2_dz5.LogerInfo
+﻿namespace Modul2_dz5.LogerInfo
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Action
     {
         private readonly Logger _logger = Logger.Instance;
+
         public Result FirstMethod()
         {
-            _logger.LogEventInfo($"Start method: {nameof(FirstMethod)}");
-            return new Result { Status=true};
-        }
-        public Result SecondMethod()
-        {
-            _logger.LogEventInfo($"Skipped logic in method: {nameof(SecondMethod)}");
+            this._logger.LogEventInfo($"Start method: {nameof(this.FirstMethod)}");
             return new Result { Status = true };
         }
-        public Result ThirdMethod()
 
+        public Result SecondMethod()
         {
-            return new Result { Status = false, ErrorMessage="I broke a logic!" };
+            this._logger.LogEventInfo($"Skipped logic in method: {nameof(this.SecondMethod)}");
+            return new Result { Status = true };
+        }
+
+        public Result ThirdMethod()
+        {
+            return new Result { Status = false, ErrorMessage = "I broke a logic!" };
         }
     }
 }
