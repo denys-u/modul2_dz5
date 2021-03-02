@@ -43,9 +43,8 @@ namespace modul2_dz5.LogerInfo
 
                 if (!result.Status)
                 {
-                    continue;
+                    _logger.LogEventError($"Action failed by a reason: {result.ErrorMessage}");
                 }
-                _logger.LogEventError($"Action failed by a reason: {result.ErrorMessage}");
             }
             _fileService.Write(LoggerFilePath, _logger.Logs);
         }
