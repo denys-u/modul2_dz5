@@ -42,7 +42,7 @@
             var logMessage = $"{DateTime.UtcNow}: {logType}: {message}";
 
             Console.WriteLine(logMessage);
-            this.logs.AppendLine(logMessage);
+            this._logs.AppendLine(logMessage);
         }
     }
 }
